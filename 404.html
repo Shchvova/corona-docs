@@ -68,23 +68,12 @@
 <h2>Sorry, we was unable to find what you were loogin for</h2>
 <p>Redirecting to the root in 5 seconds...</p>
 <script>
-    var head  = document.getElementsByTagName('head')[0];
-    
-    var link  = document.createElement('link');
-    link.rel  = 'stylesheet';
-    link.type = 'text/css';
-    link.href = 'https://docs.coronalabs.com/css/style.css';
-    head.appendChild(link);
-
-    var link  = document.createElement('link');
-    link.rel  = 'stylesheet';
-    link.type = 'text/css';
-    link.href = 'https://docs.coronalabs.com/css/shCoreDefault.css';
-    head.appendChild(link);
-
-   setTimeout(function(){
-      window.location.href = '/';
-   }, 5000);
+    Array.from(document.getElementsByTagName('head')[0].children).filter(e => e.tagName=="LINK" && e.rel=="stylesheet").filter(e=>e.getAttribute('href').startsWith("css/")).forEach(function(e) {
+        e.href = 'https://docs.coronalabs.com/' + e.getAttribute('href');
+    })
+    setTimeout(function() {
+        window.location.href = '/';
+    }, 5000);
 </script>
 <hr>
 <div id="footer">
