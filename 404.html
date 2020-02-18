@@ -68,6 +68,20 @@
 <h2>Sorry, we was unable to find what you were loogin for</h2>
 <p>Redirecting to the root in 5 seconds...</p>
 <script>
+    var head  = document.getElementsByTagName('head')[0];
+    
+    var link  = document.createElement('link');
+    link.rel  = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'https://docs.coronalabs.com/css/style.css';
+    head.appendChild(link);
+
+    var link  = document.createElement('link');
+    link.rel  = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'https://docs.coronalabs.com/css/shCoreDefault.css';
+    head.appendChild(link);
+
    setTimeout(function(){
       window.location.href = '/';
    }, 5000);
