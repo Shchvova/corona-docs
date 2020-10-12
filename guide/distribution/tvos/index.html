@@ -9,8 +9,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>Corona Documentation — Developer Guides | Building/Distribution</title>
-  <meta name="description" content="Corona lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
+  <title>Solar2D Documentation — Developer Guides | Building/Distribution</title>
+  <meta name="description" content="Solar2D lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
   <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
   <link rel="stylesheet" href="../../../css/shCoreDefault.css" type="text/css" />
 <script src="https://corona-cdn.coronalabs.com/js/docs.js"></script>
@@ -27,7 +27,7 @@
 <body>
 <div class="header"></div>
 <div class="title">
-	<span class="titleimg" onclick="window.location='https://coronalabs.com/'"></span>
+	<span class="titleimg" onclick="window.location='https://docs.coronalabs.com/'"></span>
 	<div id="nav">
 		<ul>
 <li><a href="../../../guide/programming/index.html">Getting Started</a></li>
@@ -35,7 +35,8 @@
 <li><a href="../../../api/index.html">API Reference</a></li>
 <li><a href="../../../tutorial/index.html">Tutorials</a></li>
 <li><a href="../../../plugin/index.html">Plugins</a></li>
-<li><a href="../../../native/index.html">Corona Native</a></li>
+<li><a href="../../../native/index.html">Solar2D Native</a></li>
+<li><a href="../../../coronacards/index.html">CoronaCards</a></li>
 </ul>
 
 		<!--
@@ -74,7 +75,7 @@
 <li><a href="#libraries">Libraries</a></li>
 <li><a href="#events">Events</a></li>
 </ul></li>
-<li><a href="#coronanative">Corona Native</a><ul>
+<li><a href="#solar2d-native">Solar2D Native</a><ul>
 <li><a href="#plugins-frameworks">Plugins / Frameworks</a></li>
 </ul></li>
 </ul></li>
@@ -92,7 +93,7 @@
 <li><a href="#building">Build Process</a></li>
 <li><a href="#installapp">Installation</a></li>
 <li><a href="#comparison">Feature Comparison</a></li>
-<li><a href="#native">Corona Native</a></li>
+<li><a href="#native">Solar2D Native</a></li>
 </ul>
 </div>
 <div class="guide-notebox-imp">
@@ -402,58 +403,62 @@ Important
 <td align="left"><a href="../../../api/event/mapAddress/index.html">mapAddress</a></td>
 </tr>
 <tr class="even">
-<td align="left"><a href="../../../api/event/memoryWarning/index.html">memoryWarning</a></td>
-<td align="left"><a href="../../../api/event/mapLocation/index.html">mapLocation</a></td>
+<td align="left"><a href="../../../api/event/lateUpdate/index.html">lateUpdate</a> [mapLoca</td>
+<td align="left">tion]<a href="../../../api/event/mapLocation/index.html">api.event.mapLocation</a></td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="../../../api/event/networkRequest/index.html">networkRequest</a></td>
+<td align="left"><a href="../../../api/event/memoryWarning/index.html">memoryWarning</a></td>
 <td align="left"><a href="../../../api/event/mapMarker/index.html">mapMarker</a></td>
 </tr>
 <tr class="even">
-<td align="left"><a href="../../../api/event/networkStatus/index.html">networkStatus</a></td>
+<td align="left"><a href="../../../api/event/networkRequest/index.html">networkRequest</a></td>
 <td align="left"><a href="../../../api/event/mouse/index.html">mouse</a></td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="../../../api/event/particleCollision/index.html">particleCollision</a></td>
+<td align="left"><a href="../../../api/event/networkStatus/index.html">networkStatus</a></td>
 <td align="left"><a href="../../../api/event/notification/index.html">notification</a></td>
 </tr>
 <tr class="even">
-<td align="left"><a href="../../../api/event/postCollision/index.html">postCollision</a></td>
+<td align="left"><a href="../../../api/event/particleCollision/index.html">particleCollision</a></td>
 <td align="left"><a href="../../../api/event/orientation/index.html">orientation</a></td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="../../../api/event/preCollision/index.html">preCollision</a></td>
+<td align="left"><a href="../../../api/event/postCollision/index.html">postCollision</a></td>
 <td align="left"><a href="../../../api/event/popup/index.html">popup</a></td>
 </tr>
 <tr class="even">
-<td align="left"><a href="../../../api/event/relativeTouch/index.html">relativeTouch</a></td>
+<td align="left"><a href="../../../api/event/preCollision/index.html">preCollision</a></td>
 <td align="left"><a href="../../../api/event/resize/index.html">resize</a></td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="../../../api/event/scene/index.html">scene</a></td>
+<td align="left"><a href="../../../api/event/relativeTouch/index.html">relativeTouch</a></td>
 <td align="left"><a href="../../../api/event/tap/index.html">tap</a></td>
 </tr>
 <tr class="even">
-<td align="left"><a href="../../../api/event/sprite/index.html">sprite</a></td>
+<td align="left"><a href="../../../api/event/scene/index.html">scene</a></td>
 <td align="left"><a href="../../../api/event/touch/index.html">touch</a></td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="../../../api/event/system/index.html">system</a></td>
+<td align="left"><a href="../../../api/event/sprite/index.html">sprite</a></td>
 <td align="left"><a href="../../../api/event/userInput/index.html">userInput</a></td>
 </tr>
 <tr class="even">
+<td align="left"><a href="../../../api/event/system/index.html">system</a></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
 <td align="left"><a href="../../../api/event/timer/index.html">timer</a></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="../../../api/event/unhandledError/index.html">unhandledError</a></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="../../../api/event/urlRequest/index.html">urlRequest</a></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="../../../api/event/video/index.html">video</a></td>
 <td align="left"></td>
 </tr>
@@ -463,8 +468,8 @@ Important
 <p><a id="native"></a></p>
 </div>
 </div>
-<div id="coronanative" class="section level2">
-<h2>Corona Native</h2>
+<div id="solar2d-native" class="section level2">
+<h2>Solar2D Native</h2>
 <p>The <code>App</code> project template contains Xcode projects under the <code>tvOS</code> subdirectory. Note that the plugin itself doesn't do much.</p>
 <div class="guide-notebox-imp">
 <div class="notebox-title-imp">
@@ -490,12 +495,12 @@ Important
 <hr>
 <div id="footer">
 <p class="copyright">
-© 2020 Corona Labs Inc. All Rights Reserved.
+© 2020 Solar2D All Rights Reserved.
 </p>
 <p class="feedback">
 Help us help you! If you notice a problem with this page, please report it.
 </p>
-<p><a class="feedback-button" href="https://coronalabs.com/corona-docs-feedback-form/?page=guide.distribution.tvos.index&Current+Public+Release+%282018%2E3326%29" target="_blank">Report an Issue</a></p>
+<p><a class="feedback-button" href="https://github.com/coronalabs/corona-docs/issues" target="_blank">Report an Issue</a></p>
 </div>
 </div>
 </div>

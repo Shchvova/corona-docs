@@ -9,8 +9,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>Corona Documentation — API Reference</title>
-  <meta name="description" content="Corona lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
+  <title>Solar2D Documentation — API Reference</title>
+  <meta name="description" content="Solar2D lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
   <link rel="stylesheet" href="../css/style.css" type="text/css" />
   <link rel="stylesheet" href="../css/shCoreDefault.css" type="text/css" />
 <script src="https://corona-cdn.coronalabs.com/js/docs.js"></script>
@@ -27,7 +27,7 @@
 <body>
 <div class="header"></div>
 <div class="title">
-	<span class="titleimg" onclick="window.location='https://coronalabs.com/'"></span>
+	<span class="titleimg" onclick="window.location='https://docs.coronalabs.com/'"></span>
 	<div id="nav">
 		<ul>
 <li><a href="../guide/programming/index.html">Getting Started</a></li>
@@ -35,7 +35,8 @@
 <li><a href="../api/index.html">API Reference</a></li>
 <li><a href="../tutorial/index.html">Tutorials</a></li>
 <li><a href="../plugin/index.html">Plugins</a></li>
-<li><a href="../native/index.html">Corona Native</a></li>
+<li><a href="../native/index.html">Solar2D Native</a></li>
+<li><a href="../coronacards/index.html">CoronaCards</a></li>
 </ul>
 
 		<!--
@@ -101,6 +102,7 @@
 <li><a href="#heading-compassapi.event.heading"><a href="../api/event/heading/index.html">heading (compass)</a></a></li>
 <li><a href="#inputdevicestatusapi.event.inputdevicestatus"><a href="../api/event/inputDeviceStatus/index.html">inputDeviceStatus</a></a></li>
 <li><a href="#keyapi.event.key"><a href="../api/event/key/index.html">key</a></a></li>
+<li><a href="#lateupdateapi.event.lateupdate"><a href="../api/event/lateUpdate/index.html">lateUpdate</a></a></li>
 <li><a href="#licensingapi.event.licensing"><a href="../api/event/licensing/index.html">licensing</a></a></li>
 <li><a href="#location-gpsapi.event.location"><a href="../api/event/location/index.html">location (GPS)</a></a></li>
 <li><a href="#mapaddressapi.event.mapaddress"><a href="../api/event/mapAddress/index.html">mapAddress</a></a></li>
@@ -217,8 +219,8 @@
 Notes
 </div>
 <ul>
-<li><p>This is the complete list of Lua APIs for Corona. If you're looking to extend Corona beyond the functionality provided by these Lua APIs, please see the <a href="../native/index.html">Corona Native</a> documentation.</p></li>
-<li><p>If you're new, download Corona and proceed to the <a href="../guide/programming/index.html">Getting Started</a> series. There are also numerous <a href="../guide/index.html">guides</a> on specific topics.</p></li>
+<li><p>This is the complete list of Lua APIs for Solar2D. If you're looking to extend Solar2D beyond the functionality provided by these Lua APIs, please see the <a href="../native/index.html">Solar2D Native documentation</a>.</p></li>
+<li><p>If you're new, download Solar2D and proceed to the <a href="../guide/programming/index.html">Getting Started</a> series. There are also numerous <a href="../guide/index.html">guides</a> on specific topics.</p></li>
 <li><p>To download this documentation for offline viewing, please click <a href="https://github.com/coronalabs/corona-docs/archive/gh-pages.zip">here</a>.</p></li>
 </ul>
 </div>
@@ -1319,13 +1321,22 @@ Notes
 <a href="../api/library/timer/cancel.html">timer.cancel()</a>
 </p>
 <p class="index">
+<a href="../api/library/timer/cancelAll.html">timer.cancelAll()</a>
+</p>
+<p class="index">
 <a href="../api/library/timer/pause.html">timer.pause()</a>
+</p>
+<p class="index">
+<a href="../api/library/timer/pauseAll.html">timer.pauseAll()</a>
 </p>
 <p class="index">
 <a href="../api/library/timer/performWithDelay.html">timer.performWithDelay()</a>
 </p>
 <p class="index">
 <a href="../api/library/timer/resume.html">timer.resume()</a>
+</p>
+<p class="index">
+<a href="../api/library/timer/resumeAll.html">timer.resumeAll()</a>
 </p>
 </div>
 <div id="transition.api.library.transition" class="section level4">
@@ -1335,6 +1346,9 @@ Notes
 </p>
 <p class="index">
 <a href="../api/library/transition/cancel.html">transition.cancel()</a>
+</p>
+<p class="index">
+<a href="../api/library/transition/cancelAll.html">transition.cancelAll()</a>
 </p>
 <p class="index">
 <a href="../api/library/transition/dissolve.html">transition.dissolve()</a>
@@ -1349,6 +1363,9 @@ Notes
 <a href="../api/library/transition/from.html">transition.from()</a>
 </p>
 <p class="index">
+<a href="../api/library/transition/ignoreEmptyReference.html">transition.ignoreEmptyReference</a>
+</p>
+<p class="index">
 <a href="../api/library/transition/moveBy.html">transition.moveBy()</a>
 </p>
 <p class="index">
@@ -1358,7 +1375,13 @@ Notes
 <a href="../api/library/transition/pause.html">transition.pause()</a>
 </p>
 <p class="index">
+<a href="../api/library/transition/pauseAll.html">transition.pauseAll()</a>
+</p>
+<p class="index">
 <a href="../api/library/transition/resume.html">transition.resume()</a>
+</p>
+<p class="index">
+<a href="../api/library/transition/resumeAll.html">transition.resumeAll()</a>
 </p>
 <p class="index">
 <a href="../api/library/transition/scaleBy.html">transition.scaleBy()</a>
@@ -1700,6 +1723,15 @@ Notes
 <a href="../api/event/key/phase.html">event.phase</a>
 </p>
 </div>
+<div id="lateupdateapi.event.lateupdate" class="section level4">
+<h4><a href="../api/event/lateUpdate/index.html">lateUpdate</a></h4>
+<p class="index">
+<a href="../api/event/lateUpdate/name.html">event.name</a>
+</p>
+<p class="index">
+<a href="../api/event/lateUpdate/time.html">event.time</a>
+</p>
+</div>
 <div id="licensingapi.event.licensing" class="section level4">
 <h4><a href="../api/event/licensing/index.html">licensing</a></h4>
 <p class="index">
@@ -1841,6 +1873,15 @@ Notes
 <div id="mouseapi.event.mouse" class="section level4">
 <h4><a href="../api/event/mouse/index.html">mouse</a></h4>
 <p class="index">
+<a href="../api/event/mouse/isAltDown.html">event.isAltDown</a>
+</p>
+<p class="index">
+<a href="../api/event/mouse/isCommandDown.html">event.isCommandDown</a>
+</p>
+<p class="index">
+<a href="../api/event/mouse/isCtrlDown.html">event.isCtrlDown</a>
+</p>
+<p class="index">
 <a href="../api/event/mouse/isMiddleButtonDown.html">event.isMiddleButtonDown</a>
 </p>
 <p class="index">
@@ -1850,10 +1891,22 @@ Notes
 <a href="../api/event/mouse/isSecondaryButtonDown.html">event.isSecondaryButtonDown</a>
 </p>
 <p class="index">
+<a href="../api/event/mouse/isShiftDown.html">event.isShiftDown</a>
+</p>
+<p class="index">
 <a href="../api/event/mouse/name.html">event.name</a>
 </p>
 <p class="index">
+<a href="../api/event/mouse/scrollX.html">event.scrollX</a>
+</p>
+<p class="index">
+<a href="../api/event/mouse/scrollY.html">event.scrollY</a>
+</p>
+<p class="index">
 <a href="../api/event/mouse/time.html">event.time</a>
+</p>
+<p class="index">
+<a href="../api/event/mouse/type.html">event.type</a>
 </p>
 <p class="index">
 <a href="../api/event/mouse/x.html">event.x</a>
@@ -3584,12 +3637,12 @@ Notes
 <hr>
 <div id="footer">
 <p class="copyright">
-© 2020 Corona Labs Inc. All Rights Reserved.
+© 2020 Solar2D All Rights Reserved.
 </p>
 <p class="feedback">
 Help us help you! If you notice a problem with this page, please report it.
 </p>
-<p><a class="feedback-button" href="https://coronalabs.com/corona-docs-feedback-form/?page=api.index&Current+Public+Release+%282018%2E3326%29" target="_blank">Report an Issue</a></p>
+<p><a class="feedback-button" href="https://github.com/coronalabs/corona-docs/issues" target="_blank">Report an Issue</a></p>
 </div>
 </div>
 </div>

@@ -9,8 +9,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>Corona Documentation — Corona Native | Plugins | Creating Lua Plugins</title>
-  <meta name="description" content="Corona lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
+  <title>Solar2D Documentation — Solar2D Native | Plugins | Creating Lua Plugins</title>
+  <meta name="description" content="Solar2D lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
   <link rel="stylesheet" href="../../css/style.css" type="text/css" />
   <link rel="stylesheet" href="../../css/shCoreDefault.css" type="text/css" />
 <script src="https://corona-cdn.coronalabs.com/js/docs.js"></script>
@@ -27,7 +27,7 @@
 <body>
 <div class="header"></div>
 <div class="title">
-	<span class="titleimg" onclick="window.location='https://coronalabs.com/'"></span>
+	<span class="titleimg" onclick="window.location='https://docs.coronalabs.com/'"></span>
 	<div id="nav">
 		<ul>
 <li><a href="../../guide/programming/index.html">Getting Started</a></li>
@@ -35,7 +35,8 @@
 <li><a href="../../api/index.html">API Reference</a></li>
 <li><a href="../../tutorial/index.html">Tutorials</a></li>
 <li><a href="../../plugin/index.html">Plugins</a></li>
-<li><a href="../../native/index.html">Corona Native</a></li>
+<li><a href="../../native/index.html">Solar2D Native</a></li>
+<li><a href="../../coronacards/index.html">CoronaCards</a></li>
 </ul>
 
 		<!--
@@ -72,11 +73,11 @@
 </ul>
 </div>
 <div id="breadcrumb">
-<a href="https://docs.coronalabs.com">Documentation</a>  ▸  <a href="../../native/index.html">Corona Native</a>  ▸  <a href="../../native/plugin/index.html">Plugins</a>  ▸  <a href="../../native/plugin/luaplugin.html">Creating Lua Plugins</a>
+<a href="https://docs.coronalabs.com">Documentation</a>  ▸  <a href="../../native/index.html">Solar2D Native</a>  ▸  <a href="../../native/plugin/index.html">Plugins</a>  ▸  <a href="../../native/plugin/luaplugin.html">Creating Lua Plugins</a>
 </div>
 <div id="creating-lua-plugins" class="section level1">
 <h1>Creating Lua Plugins</h1>
-<p>This guide outlines how to create a Lua plugin and package it for submission to the <a href="https://marketplace.coronalabs.com/">Corona Marketplace</a>.</p>
+<p>This guide outlines how to create a Lua plugin and package it for submission to the <a href="https://www.solar2dplugins.com/">Solar2D Plugins Marketplace</a>.</p>
 <div class="docs-tip-outer">
 <div class="docs-tip-inner-left">
 <div class="fa fa-cog">
@@ -254,12 +255,12 @@ local lib = Library:new{ name = "plugin.myLuaPlugin", publisherId = "com.mydomai
 </div>
 <div id="plugin-submission" class="section level2">
 <h2>Plugin Submission</h2>
-<p>If you'd like to <a href="https://marketplace.coronalabs.com/product-submit">submit a plugin</a> for availability in the <a href="https://marketplace.coronalabs.com/">Corona Marketplace</a>, there are a few more steps you must complete:</p>
+<p>The following steps apply regardless of which marketplace you choose to submit your plugin to.</p>
 <div id="device-testing" class="section level3">
 <h3>Device Testing</h3>
 <p>Using the <code>main.lua</code> file in the <code>lua</code> folder, you should build a basic sample app which exhibits the plugin and its features in action. Within that <code>main.lua</code> file, load the plugin just like you would any other Lua module:</p>
 <pre class="brush: lua;">local myLuaPlugin = require( "plugin.myLuaPlugin" )</pre>
-<p>Because the plugin code is in the <code>plugin</code> folder, your plugin will be accessible in the same manner as native Corona plugins.</p>
+<p>Because the plugin code is in the <code>plugin</code> folder, your plugin will be accessible in the same manner as native Solar2D plugins.</p>
 <p>Finally, you should ensure that your code executes on both iOS and Android devices, since Lua plugins are intended to be <nobr>cross-platform</nobr> compatible. Verify that your plugin successfully compiles for devices and be aware of potential performance issues on <nobr>low-end</nobr> devices.</p>
 </div>
 <div id="documentation-sample" class="section level3">
@@ -293,20 +294,20 @@ local lib = Library:new{ name = "plugin.myLuaPlugin", publisherId = "com.mydomai
 build.bat</pre>
 </div>
 </div>
-<p>This process converts your code into bytecode and prepares it for submission to the <a href="https://marketplace.coronalabs.com/">Corona Marketplace</a>. When complete, you will see a <nobr><code>plugin-PLUGIN_NAME.zip</code></nobr> file in your project directory.</p>
+<p>This process converts your code into bytecode and prepares it for submission to a plugins host. When complete, you will see a <nobr><code>plugin-PLUGIN_NAME.zip</code></nobr> file in your project directory.</p>
 </div>
 <div id="submission" class="section level3">
 <h3>Submission</h3>
-<p>Once your plugin is packaged and complete, with hosted documentation and at least one sample, you can <a href="https://marketplace.coronalabs.com/product-submit">submit</a> it Corona Labs. We will then contact you and personally help you through the process of uploading the plugin to our distribution servers and offering it to Corona developers via the <a href="https://marketplace.coronalabs.com/">Corona Marketplace</a>.</p>
+<p>If you'd like to submit a plugin for availability in the <a href="https://www.solar2dplugins.com/">Solar2D Plugins Marketplace</a>, refer to the <a href="https://www.solar2dplugins.com/asset-packaging-guidelines/">Solar2D Plugins Marketplace Asset Packaging Guidelines</a> for additional steps.</p>
 <hr>
 <div id="footer">
 <p class="copyright">
-© 2020 Corona Labs Inc. All Rights Reserved.
+© 2020 Solar2D All Rights Reserved.
 </p>
 <p class="feedback">
 Help us help you! If you notice a problem with this page, please report it.
 </p>
-<p><a class="feedback-button" href="https://coronalabs.com/corona-docs-feedback-form/?page=native.plugin.luaplugin&Current+Public+Release+%282018%2E3326%29" target="_blank">Report an Issue</a></p>
+<p><a class="feedback-button" href="https://github.com/coronalabs/corona-docs/issues" target="_blank">Report an Issue</a></p>
 </div>
 </div>
 </div>

@@ -9,8 +9,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>Corona Documentation — Corona Native | iOS | Using Plugins</title>
-  <meta name="description" content="Corona lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
+  <title>Solar2D Documentation — Solar2D Native | iOS | Using Plugins</title>
+  <meta name="description" content="Solar2D lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
   <link rel="stylesheet" href="../../css/style.css" type="text/css" />
   <link rel="stylesheet" href="../../css/shCoreDefault.css" type="text/css" />
 <script src="https://corona-cdn.coronalabs.com/js/docs.js"></script>
@@ -27,7 +27,7 @@
 <body>
 <div class="header"></div>
 <div class="title">
-	<span class="titleimg" onclick="window.location='https://coronalabs.com/'"></span>
+	<span class="titleimg" onclick="window.location='https://docs.coronalabs.com/'"></span>
 	<div id="nav">
 		<ul>
 <li><a href="../../guide/programming/index.html">Getting Started</a></li>
@@ -35,7 +35,8 @@
 <li><a href="../../api/index.html">API Reference</a></li>
 <li><a href="../../tutorial/index.html">Tutorials</a></li>
 <li><a href="../../plugin/index.html">Plugins</a></li>
-<li><a href="../../native/index.html">Corona Native</a></li>
+<li><a href="../../native/index.html">Solar2D Native</a></li>
+<li><a href="../../coronacards/index.html">CoronaCards</a></li>
 </ul>
 
 		<!--
@@ -54,17 +55,17 @@
 </div>
 <div id="TOC">
 <ul>
-<li><a href="#using-plugins-in-coronanative-ios">Using Plugins in Corona Native — iOS</a><ul>
+<li><a href="#using-plugins-in-solar2d-native-ios">Using Plugins in Solar2D Native — iOS</a><ul>
 <li><a href="#procedure">Procedure</a></li>
 </ul></li>
 </ul>
 </div>
 <div id="breadcrumb">
-<a href="https://docs.coronalabs.com">Documentation</a>  ▸  <a href="../../native/index.html">Corona Native</a>  ▸  <a href="../../native/ios/index.html">iOS</a>  ▸  <a href="../../native/ios/usingPlugins.html">Using Plugins</a>
+<a href="https://docs.coronalabs.com">Documentation</a>  ▸  <a href="../../native/index.html">Solar2D Native</a>  ▸  <a href="../../native/ios/index.html">iOS</a>  ▸  <a href="../../native/ios/usingPlugins.html">Using Plugins</a>
 </div>
-<div id="using-plugins-in-coronanative-ios" class="section level1">
-<h1>Using Plugins in Corona Native — iOS</h1>
-<p>To use plugins with Corona Native builds through Xcode, you must include them in <code>build.settings</code> just like you would for Corona Simulator builds, for example:</p>
+<div id="using-plugins-in-solar2d-native-ios" class="section level1">
+<h1>Using Plugins in Solar2D Native — iOS</h1>
+<p>To use plugins with Solar2D Native builds through Xcode, you must include them in <code>build.settings</code> just like you would for Simulator builds, for example:</p>
 <pre class="brush: lua; gutter: false; highlight: [5,6,7,8]; first-line: 1;">settings =
 {
     plugins =
@@ -75,7 +76,6 @@
         },
     }, 
 }</pre>
-<p>From here, you must run a process which contacts the <a href="https://marketplace.coronalabs.com/">Corona Marketplace</a> and confirms that you have an active license for the plugin(s). If confirmed, Corona will install the library files and link them to your project.</p>
 <div id="procedure" class="section level2">
 <h2>Procedure</h2>
 <p>To perform the process described above, simply follow these steps:</p>
@@ -103,7 +103,7 @@
 </div>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li>In the Xcode tool bar, click on the <strong>active scheme</strong> button again and select your main app. Now you can build your app with any plugin in the <a href="https://marketplace.coronalabs.com/">Corona Marketplace</a>.</li>
+<li>In the Xcode tool bar, click on the <strong>active scheme</strong> button again and select your main app. Now you can build your app with any plugin in the <a href="https://plugins.solar2d.com/">Free Plugins Directory</a>.</li>
 </ol>
 <div class="docs-tip-outer docs-tip-color-alert">
 <div class="docs-tip-inner-left">
@@ -118,12 +118,12 @@
 <hr>
 <div id="footer">
 <p class="copyright">
-© 2020 Corona Labs Inc. All Rights Reserved.
+© 2020 Solar2D All Rights Reserved.
 </p>
 <p class="feedback">
 Help us help you! If you notice a problem with this page, please report it.
 </p>
-<p><a class="feedback-button" href="https://coronalabs.com/corona-docs-feedback-form/?page=native.ios.usingPlugins&Current+Public+Release+%282018%2E3326%29" target="_blank">Report an Issue</a></p>
+<p><a class="feedback-button" href="https://github.com/coronalabs/corona-docs/issues" target="_blank">Report an Issue</a></p>
 </div>
 </div>
 </div>

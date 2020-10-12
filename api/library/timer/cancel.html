@@ -9,8 +9,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>Corona Documentation — API Reference | Libraries | timer | cancel</title>
-  <meta name="description" content="Corona lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
+  <title>Solar2D Documentation — API Reference | Libraries | timer | cancel</title>
+  <meta name="description" content="Solar2D lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
   <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
   <link rel="stylesheet" href="../../../css/shCoreDefault.css" type="text/css" />
 <script src="https://corona-cdn.coronalabs.com/js/docs.js"></script>
@@ -27,7 +27,7 @@
 <body>
 <div class="header"></div>
 <div class="title">
-	<span class="titleimg" onclick="window.location='https://coronalabs.com/'"></span>
+	<span class="titleimg" onclick="window.location='https://docs.coronalabs.com/'"></span>
 	<div id="nav">
 		<ul>
 <li><a href="../../../guide/programming/index.html">Getting Started</a></li>
@@ -35,7 +35,8 @@
 <li><a href="../../../api/index.html">API Reference</a></li>
 <li><a href="../../../tutorial/index.html">Tutorials</a></li>
 <li><a href="../../../plugin/index.html">Plugins</a></li>
-<li><a href="../../../native/index.html">Corona Native</a></li>
+<li><a href="../../../native/index.html">Solar2D Native</a></li>
+<li><a href="../../../coronacards/index.html">CoronaCards</a></li>
 </ul>
 
 		<!--
@@ -57,7 +58,7 @@
 <li><a href="#timer.cancel">timer.cancel()</a><ul>
 <li><a href="#overview">Overview</a></li>
 <li><a href="#syntax">Syntax</a><ul>
-<li><a href="#timerid-required">timerID <sub><sup>(required)</sup></sub></a></li>
+<li><a href="#whattocancel-required">whatToCancel <sub><sup>(required)</sup></sub></a></li>
 </ul></li>
 <li><a href="#example">Example</a></li>
 </ul></li>
@@ -81,7 +82,7 @@
 </tr>
 <tr class="odd">
 <td align="left"><strong>Revision</strong></td>
-<td align="left"><a href="https://coronalabs.com/links/docs/current-corona-sdk">Current Public Release (2018.3326)</a></td>
+<td align="left"><a href="https://github.com/coronalabs/corona/releases">Release 2020.3619</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Keywords</strong></td>
@@ -96,7 +97,7 @@
 </blockquote>
 <div id="overview" class="section level2">
 <h2>Overview</h2>
-<p>Cancels a timer operation initiated with <a href="../../../api/library/timer/performWithDelay.html">timer.performWithDelay()</a>.</p>
+<p>Cancels a specific timer or all timers with the same tag that were initiated with <a href="../../../api/library/timer/performWithDelay.html">timer.performWithDelay()</a>.</p>
 <!---
 
 This function returns two numbers: time remaining ( and number of iterations that were left.
@@ -105,14 +106,31 @@ This function returns two numbers: time remaining ( and number of iterations tha
 </div>
 <div id="syntax" class="section level2">
 <h2>Syntax</h2>
-<pre class="brush: lua;">timer.cancel( timerID )</pre>
-<div id="timerid-required" class="section level5">
-<h5>timerID <sub><sup>(required)</sup></sub></h5>
-<p><em><a href="../../../api/type/Object.html">Object</a>.</em> Handle returned by the call to <a href="../../../api/library/timer/performWithDelay.html">timer.performWithDelay()</a>.</p>
+<pre class="brush: lua;">timer.cancel( whatToCancel )</pre>
+<div id="whattocancel-required" class="section level5">
+<h5>whatToCancel <sub><sup>(required)</sup></sub></h5>
+<p><em><a href="../../../api/type/Object.html">Object</a> or <a href="../../../api/type/String.html">String</a>.</em> The timer ID from, or <code>tag</code> passed to, <a href="../../../api/library/timer/performWithDelay.html">timer.performWithDelay()</a>. Note: Using <code>tag</code> requires <code>Solar2D 2020.3611</code> or a newer build.</p>
 </div>
 </div>
 <div id="example" class="section level2">
 <h2>Example</h2>
+<pre class="brush: lua;">local function listener( event )
+    print( "listener called" )
+end
+ 
+timer1 = timer.performWithDelay( 2000, listener )  -- wait 2 seconds
+
+-- sometime later...
+timer.cancel( timer1 )</pre>
+<pre class="brush: lua;">local function listener( event )
+    print( "listener called" )
+end
+ 
+timer1 = timer.performWithDelay( 2000, listener, "red" )  -- wait 2 seconds
+timer2 = timer.performWithDelay( 3000, listener, "blue" )  -- wait 3 seconds
+
+-- sometime later...
+timer.cancel( "red" )</pre>
 <pre class="brush: lua;">local t = {}
 function t:timer( event )
     local count = event.count
@@ -127,12 +145,12 @@ timer.performWithDelay( 1000, t, 0 )</pre>
 <hr>
 <div id="footer">
 <p class="copyright">
-© 2020 Corona Labs Inc. All Rights Reserved.
+© 2020 Solar2D All Rights Reserved.
 </p>
 <p class="feedback">
 Help us help you! If you notice a problem with this page, please report it.
 </p>
-<p><a class="feedback-button" href="https://coronalabs.com/corona-docs-feedback-form/?page=api.library.timer.cancel&Current+Public+Release+%282018%2E3326%29" target="_blank">Report an Issue</a></p>
+<p><a class="feedback-button" href="https://github.com/coronalabs/corona-docs/issues" target="_blank">Report an Issue</a></p>
 </div>
 </div>
 </div>

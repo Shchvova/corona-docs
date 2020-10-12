@@ -9,8 +9,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>Corona Documentation — Developer Guides | Building/Distribution</title>
-  <meta name="description" content="Corona lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
+  <title>Solar2D Documentation — Developer Guides | Building/Distribution</title>
+  <meta name="description" content="Solar2D lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
   <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
   <link rel="stylesheet" href="../../../css/shCoreDefault.css" type="text/css" />
 <script src="https://corona-cdn.coronalabs.com/js/docs.js"></script>
@@ -27,7 +27,7 @@
 <body>
 <div class="header"></div>
 <div class="title">
-	<span class="titleimg" onclick="window.location='https://coronalabs.com/'"></span>
+	<span class="titleimg" onclick="window.location='https://docs.coronalabs.com/'"></span>
 	<div id="nav">
 		<ul>
 <li><a href="../../../guide/programming/index.html">Getting Started</a></li>
@@ -35,7 +35,8 @@
 <li><a href="../../../api/index.html">API Reference</a></li>
 <li><a href="../../../tutorial/index.html">Tutorials</a></li>
 <li><a href="../../../plugin/index.html">Plugins</a></li>
-<li><a href="../../../native/index.html">Corona Native</a></li>
+<li><a href="../../../native/index.html">Solar2D Native</a></li>
+<li><a href="../../../coronacards/index.html">CoronaCards</a></li>
 </ul>
 
 		<!--
@@ -68,7 +69,7 @@
 <div id="generating-live-builds" class="section level1">
 <h1>Generating Live Builds</h1>
 <div class="guide-intro">
-<p>Corona <strong>live builds</strong> are a powerful and efficient way to see exactly how your <nobr>in-development</nobr> Corona app will appear on real devices. Benefits include:</p>
+<p><strong>Live builds</strong> are a powerful and efficient way to see exactly how your <nobr>in-development</nobr> Solar2D app will appear on real devices. Benefits include:</p>
 </div>
 <div class="docs-tip-outer">
 <div class="docs-tip-inner-left">
@@ -87,7 +88,7 @@
 </div>
 </div>
 <div class="docs-tip-inner-right">
-<p>Improve your workflow by testing on multiple devices and different platforms concurrently, all from a single Corona code base.</p>
+<p>Improve your workflow by testing on multiple devices and different platforms concurrently, all from a single code base.</p>
 </div>
 </div>
 <div class="docs-tip-outer" style="background-color: #a6b0ea;">
@@ -104,7 +105,7 @@
 <div class="notebox-title-imp">
 Important
 </div>
-<p>To use Corona live builds on Windows, you must install <a href="https://www.apple.com/itunes/download/">iTunes</a>.</p>
+<p>To use live builds on Windows, you must install <a href="https://www.apple.com/itunes/download/">iTunes</a>.</p>
 </div>
 <div class="guides-toc">
 <ul>
@@ -119,7 +120,7 @@ Important
 <h2>Live Build Creation</h2>
 <p>To create a live build, simply follow these steps:</p>
 <ol style="list-style-type: decimal">
-<li>In the Corona Simulator, open the <strong>Build</strong> dialog window <nobr>(<strong>File</strong> → <strong>Build</strong>)</nobr> for either iOS, Android, or tvOS.</li>
+<li>In the Solar2D Simulator, open the <strong>Build</strong> dialog window <nobr>(<strong>File</strong> → <strong>Build</strong>)</nobr> for either iOS, Android, or tvOS.</li>
 </ol>
 <!---
 
@@ -133,7 +134,7 @@ Important
 
 -->
 <ol start="2" style="list-style-type: decimal">
-<li><p>Confirm that the first several settings are correct in terms of how you typically build an app from the Corona Simulator. If you're not familiar with preparing/building apps for devices, please see the following guides:</p>
+<li><p>Confirm that the first several settings are correct in terms of how you typically build an app from the Solar2D Simulator. If you're not familiar with preparing/building apps for devices, please see the following guides:</p>
 <ul>
 <li><a href="../../../guide/distribution/iOSBuild/index.html">Provisioning and Building — iOS</a></li>
 <li><a href="../../../guide/distribution/androidBuild/index.html">Signing and Building — Android</a></li>
@@ -201,7 +202,7 @@ Important
 </div>
 <div id="corona-live-server" class="section level2">
 <h2>Corona Live Server</h2>
-<p><strong>Corona Live Server</strong> is an application which syncs project changes over your local network. Every time you <a href="#create">create a live build</a>, the Corona Simulator will initiate it and automatically add the built project to the Corona Live Server project list.</p>
+<p><strong>Corona Live Server</strong> is an application which syncs project changes over your local network. Every time you <a href="#create">create a live build</a>, Simulator will initiate it and automatically add the built project to the Corona Live Server project list.</p>
 <div class="guide-notebox">
 <div class="notebox-title">
 Notes
@@ -242,17 +243,17 @@ Notes
 <li>Remove/uninstall the live build from the device.</li>
 <li>Rebuild the app and make sure that <strong>Create Live Build</strong> is selected from the build dialog window. Also, remember that only <strong>Development</strong> provisioning profiles <nobr>(iOS or tvOS)</nobr> or <strong>Debug</strong> keystores <nobr>(Android or Kindle Fire)</nobr> can be used to produce live builds.</li>
 <li>Start your app on the device and test for proper functionality. If the live build still doesn't update, experiment with modifying the <code>.CoronaLiveBuild</code> file as outlined in the <a href="#live-build-file">Live Build File</a> section above.</li>
-<li>If you need further assistance beyond this, please consult the <a href="https://forums.coronalabs.com/forum/658-corona-live-server/">Corona Forums</a>.</li>
+<li>If you need further assistance beyond this, please consult the <a href="https://forums.solar2d.com/c/corona/corona-live-builds/114">Solar2D Forums</a>.</li>
 </ol>
 <hr>
 <div id="footer">
 <p class="copyright">
-© 2020 Corona Labs Inc. All Rights Reserved.
+© 2020 Solar2D All Rights Reserved.
 </p>
 <p class="feedback">
 Help us help you! If you notice a problem with this page, please report it.
 </p>
-<p><a class="feedback-button" href="https://coronalabs.com/corona-docs-feedback-form/?page=guide.distribution.liveBuild.index&Current+Public+Release+%282018%2E3326%29" target="_blank">Report an Issue</a></p>
+<p><a class="feedback-button" href="https://github.com/coronalabs/corona-docs/issues" target="_blank">Report an Issue</a></p>
 </div>
 </div>
 </div>

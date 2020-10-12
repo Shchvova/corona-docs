@@ -9,8 +9,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>Corona Documentation — Plugins | iCloud</title>
-  <meta name="description" content="Corona lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
+  <title>Solar2D Documentation — Plugins | iCloud</title>
+  <meta name="description" content="Solar2D lets you build games/apps for all major platforms including iOS, Android, Kindle, Apple TV, Android TV, macOS, and Windows. Get the free toolset!" />
   <link rel="stylesheet" href="../../css/style.css" type="text/css" />
   <link rel="stylesheet" href="../../css/shCoreDefault.css" type="text/css" />
 <script src="https://corona-cdn.coronalabs.com/js/docs.js"></script>
@@ -27,7 +27,7 @@
 <body>
 <div class="header"></div>
 <div class="title">
-	<span class="titleimg" onclick="window.location='https://coronalabs.com/'"></span>
+	<span class="titleimg" onclick="window.location='https://docs.coronalabs.com/'"></span>
 	<div id="nav">
 		<ul>
 <li><a href="../../guide/programming/index.html">Getting Started</a></li>
@@ -35,7 +35,8 @@
 <li><a href="../../api/index.html">API Reference</a></li>
 <li><a href="../../tutorial/index.html">Tutorials</a></li>
 <li><a href="../../plugin/index.html">Plugins</a></li>
-<li><a href="../../native/index.html">Corona Native</a></li>
+<li><a href="../../native/index.html">Solar2D Native</a></li>
+<li><a href="../../coronacards/index.html">CoronaCards</a></li>
 </ul>
 
 		<!--
@@ -121,7 +122,7 @@
 </tr>
 <tr class="even">
 <td align="left"><strong>Revision</strong></td>
-<td align="left"><a href="https://coronalabs.com/links/docs/current-corona-sdk">Current Public Release (2018.3326)</a></td>
+<td align="left"><a href="https://github.com/coronalabs/corona/releases">Release 2020.3619</a></td>
 </tr>
 <tr class="odd">
 <td align="left"><strong>Keywords</strong></td>
@@ -136,7 +137,7 @@
 </blockquote>
 <div id="overview" class="section level2">
 <h2>Overview</h2>
-<p>The <a href="https://marketplace.coronalabs.com/plugin/iCloud">iCloud plugin</a> enables access to Apple's iCloud APIs and provides instruments to synchronize data across a user's devices.</p>
+<p>The iCloud plugin enables access to Apple's iCloud APIs and provides instruments to synchronize data across a user's devices.</p>
 <div class="guide-notebox-imp">
 <div class="notebox-title-imp">
 Important
@@ -198,7 +199,7 @@ Important
 </div>
 <div id="sharing-data" class="section level3">
 <h3>Sharing Data</h3>
-<p>For Documents in iCloud and CloudKit, you can share the data between multiple apps. This is facilitated by associating a dedicated <a href="#containers">iCloud Container</a> with each app via the <a href="https://developer.apple.com/">Apple Developer</a> portal as outlined in the steps above. From that point, Corona will automatically extract the container information during the build process for each platform in which <code>iCloud</code> is set to <code>true</code>:</p>
+<p>For Documents in iCloud and CloudKit, you can share the data between multiple apps. This is facilitated by associating a dedicated <a href="#containers">iCloud Container</a> with each app via the <a href="https://developer.apple.com/">Apple Developer</a> portal as outlined in the steps above. From that point, Solar2D will automatically extract the container information during the build process for each platform in which <code>iCloud</code> is set to <code>true</code>:</p>
 <pre class="brush: lua;">settings =
 {
     iphone =
@@ -387,12 +388,12 @@ Runtime:addEventListener( "tap", globalTap )</pre>
 <hr>
 <div id="footer">
 <p class="copyright">
-© 2020 Corona Labs Inc. All Rights Reserved.
+© 2020 Solar2D All Rights Reserved.
 </p>
 <p class="feedback">
 Help us help you! If you notice a problem with this page, please report it.
 </p>
-<p><a class="feedback-button" href="https://coronalabs.com/corona-docs-feedback-form/?page=plugin.iCloud.index&Current+Public+Release+%282018%2E3326%29" target="_blank">Report an Issue</a></p>
+<p><a class="feedback-button" href="https://github.com/coronalabs/corona-docs/issues" target="_blank">Report an Issue</a></p>
 </div>
 </div>
 </div>
